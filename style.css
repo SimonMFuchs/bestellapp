@@ -1,0 +1,45 @@
+header {
+    height: 80px;
+    display: flex;
+    background-color: #FF8000;
+}
+
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 16px;
+}
+
+.header-container img {
+    height: 60px;
+}
+
+.burger {
+    height: 32px;
+    width: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;    align-items: center;
+}
+
+.layer {
+    height: 4px;
+    width: 28px;
+    background-color: white;
+    border-radius: 1px;
+}
+
+.hero-container {
+    height: 220px;
+    background-image: url('./assets/img/pizza-hero1.jpg');
+    background-position: bottom;
+    background-size: cover;
+}
+
+.la-carta-container {
+    display: flex;
+    flex-direction: column;
+}
