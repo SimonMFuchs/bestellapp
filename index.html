@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +16,9 @@
 
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
-<body>
+
+<body onload="init()">
+    <div id="burger-menu" class="burger-menu-container"></div>
     <header>
         <div class="header-container">
             <img src="./assets/img/Logo.png" alt="logo">
@@ -31,10 +34,13 @@
     </section>
     <nav>
         <img src="" alt="icon">
-        <link rel="stylesheet" href="#">
-        <link rel="stylesheet" href="#">
-        <link rel="stylesheet" href="#">
+        <a href="#">Hauptgerichte</a>
+        <a href="#">Beilagen</a>
+        <a href="#">Salate</a>
     </nav>
     <section id="la-carta" class="la-carta-container"></section>
+    <section id="cart" class="cart-container">
+    </section>
 </body>
+
 </html>

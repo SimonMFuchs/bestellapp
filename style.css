@@ -43,3 +43,36 @@ header {
     display: flex;
     flex-direction: column;
 }
+
+.category-image0 {
+    height: 140px;
+    background-image: url("./assets/img/category0.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.category-image1 {
+    height: 140px;
+    background-image: url("./assets/img/category1.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.category-image2 {
+    height: 140px;
+    background-image: url("./assets/img/category2.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+.cart-container {
+    background-color: #FF8000;
+    min-height: 40px;
+    min-width: 40px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+

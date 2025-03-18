@@ -43,8 +43,8 @@ let mainCourse = [
     "description": "mit Bolognesesoße und Béchamel",
     "price": {
       "regular": 8.5,
-    },
-  },
+    }
+  }
 ];
 
 let sides = [
@@ -70,7 +70,7 @@ let sides = [
     "price": {
       "regular": 3.5,
       "large": 5.5,
-    },
+    }
   }
 ];
 
@@ -94,6 +94,6 @@ let salads = [
     "description": "Tomaten-Mozzarella-Salat mit Basilikum und Olivenöl",
     "price": {
       "regular": 5.0,
-    },
+    }
   }
 ];
