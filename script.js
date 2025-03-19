@@ -48,3 +48,7 @@ function setArr(arrCount){
             return salads;
     }
 }
+
+function addToCart(){
+    
+}

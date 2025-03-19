@@ -9,3 +9,23 @@ body {
 a {
     text-decoration: none;
 }
+
+h2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.general-margin-width {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.general-margin-height {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.maximal-width {
+    max-width: 1200px;
+    margin: auto;
+}

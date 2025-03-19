@@ -2,6 +2,8 @@ header {
     height: 80px;
     display: flex;
     background-color: #FF8000;
+    display: flex;
+    justify-content: center;
 }
 
 .header-container{
@@ -14,6 +16,7 @@ header {
 
 .header-container img {
     height: 60px;
+    margin-left: 8px;
 }
 
 .burger {
@@ -32,11 +35,49 @@ header {
     border-radius: 1px;
 }
 
+.hero {
+    display: flex;
+    flex-direction: column;
+}
+
 .hero-container {
     height: 220px;
     background-image: url('./assets/img/pizza-hero1.jpg');
     background-position: bottom;
     background-size: cover;
+}
+
+h1 {
+    margin-top: 72px;
+    margin-bottom: 8px;
+    font-size: 32px;
+}
+
+.hero p {
+    color: #FF8000;
+}
+
+.hero img {
+    align-self: center;
+    height: 100px;
+    width: 100px;
+    margin-top: -50px;
+    margin-bottom: -50px;
+    border-radius: 30px;
+    border: px solid rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    background-color: rgba(255, 128, 0, 0.1);
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+nav a {
+    color: rgb(98, 98, 98);
+    font-weight: 700;
 }
 
 .la-carta-container {
@@ -65,8 +106,6 @@ header {
     background-size: cover;
 }
 
-
-
 .cart-container {
     background-color: #FF8000;
     min-height: 40px;
@@ -76,3 +115,39 @@ header {
     right: 0;
 }
 
+.dish-in-container {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.dish-in-container:hover {
+    cursor: pointer;
+    background-color: rgba(255, 128, 0, 0.1);
+}
+
+.dish-info-container {
+    margin-left: 8px;
+}
+
+.add-btn {
+    height: 32px;
+    width: 32px;
+    background: none;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-top: none;
+    border-right: none;
+    color: #FF8000;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.add-btn:hover {
+    cursor: pointer;
+    /* background-color:#FF8000; */
+}
+
+footer {
+    height: 60px;
+    background-color: #FF8000;
+}
