@@ -1,3 +1,23 @@
+#cart-btn {
+    position: fixed;
+    height: 60px;
+    min-width: 260px;
+    background-color: #007AFE;
+    border: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#cart-btn:hover {
+    cursor: pointer;
+    filter: brightness(1.15);
+}
+
 header {
     height: 80px;
     display: flex;
@@ -6,7 +26,17 @@ header {
     justify-content: center;
 }
 
-.header-container{
+main {
+    display: flex;
+}
+
+.main-column-left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,7 +55,8 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;    align-items: center;
+    align-items: center;
+    align-items: center;
 }
 
 .layer {
@@ -33,6 +64,19 @@ header {
     width: 28px;
     background-color: white;
     border-radius: 1px;
+}
+
+.cart-wrapper {
+    display: none;
+}
+
+.cart-wrapper h2 {
+    text-align: center;
+    margin: 16px;
+}
+
+.cart-wrapper div {
+    border-bottom: 1px solid #0000001a;
 }
 
 .hero {
@@ -83,6 +127,7 @@ nav a {
 .la-carta-container {
     display: flex;
     flex-direction: column;
+    /* margin-bottom: 80px; */
 }
 
 .category-image0 {
@@ -106,15 +151,6 @@ nav a {
     background-size: cover;
 }
 
-.cart-container {
-    background-color: #FF8000;
-    min-height: 40px;
-    min-width: 40px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-
 .dish-in-container {
     display: flex;
     justify-content: space-between;
@@ -123,7 +159,7 @@ nav a {
 
 .dish-in-container:hover {
     cursor: pointer;
-    background-color: rgba(255, 128, 0, 0.1);
+    background-color: rgba(255, 128, 0, 0.2);
 }
 
 .dish-info-container {
@@ -147,7 +183,17 @@ nav a {
     /* background-color:#FF8000; */
 }
 
+.main-column-right {
+    /* border: 1px solid rgba(0, 0, 0, 0.2); */
+    box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-container {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
 footer {
     height: 60px;
+    width: 100%;
     background-color: #FF8000;
 }
