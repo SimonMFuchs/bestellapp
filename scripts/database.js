@@ -2,48 +2,38 @@ let mainCourse = [
   {
     "name": "Pizza Margherita",
     "description": "mit Mozarella",
-    "price": {
-      "regular": 6.9,
-      "large": 7.9,
-    },
+    "price": 6.9,
+    "amount": 1
   },
   {
     "name": "Pizza Diavola",
     "description": "mit Salami, Peperoni, Knoblauch und Mozarella",
-    "price": {
-      "regular": 8.9,
-      "large": 9.9,
-    },
+    "price": 8.9,
+    "amount": 1
   },
   {
     "name": "Pizza Pino",
     "description": "mit Pilzen, Peperoni, Paprika und Mozarella",
-    "price": {
-      "regular": 7.9,
-      "large": 8.9,
-    },
+    "price": 7.9,
+    "amount": 1
   },
   {
     "name": "Pizza Quattro Formaggi",
     "description": "mit vier verschiedenen Käsesorten",
-    "price": {
-      "regular": 8.9,
-      "large": 9.9,
-    },
+    "price": 8.9,
+    "amount": 1
   },
   {
     "name": "Spaghetti Aglio e Olio",
     "description": "mit Knoblauch, Olivenöl und Peperoncini",
-    "price": {
-      "regular": 7.5,
-    },
+    "price": 7.5,
+    "amount": 1
   },
   {
     "name": "Lasagne al Forno",
     "description": "mit Bolognesesoße und Béchamel",
-    "price": {
-      "regular": 8.5,
-    }
+    "price": 8.5,
+    "amount": 1
   }
 ];
 
@@ -51,26 +41,20 @@ let sides = [
   {
     "name": "Pommes Frites",
     "description": "frittierte Kartoffelstreifen",
-    "price": {
-      "regular": 2.9,
-      "large": 4.9,
-    },
+    "price": 2.9,
+    "amount": 1
   },
   {
     "name": "Knoblauchbrot",
     "description": "geröstetes Brot mit Knoblauchbutter",
-    "price": {
-      "regular": 2.9,
-      "large": 4.9,
-    },
+    "price": 2.9,
+    "amount": 1
   },
   {
     "name": "Bruschetta",
     "description": "geröstetes Brot mit Tomaten und Basilikum",
-    "price": {
-      "regular": 3.5,
-      "large": 5.5,
-    }
+    "price": 3.5,
+    "amount": 1
   }
 ];
 
@@ -78,22 +62,20 @@ let salads = [
   {
     "name": "Insalata Mista",
     "description": "gemischter Salat mit Essig-Öl-Dressing",
-    "price": {
-      "regular": 4.5,
-    },
+    "price": 4.5,
+    "amount": 1
   },
   {
     "name": "Caesar Salad",
     "description": "Romanasalat mit Caesar-Dressing, Parmesan und Croutons",
-    "price": {
-      "regular": 5.5,
-    },
+    "price": 5.5,
+    "amount": 1
   },
   {
     "name": "Caprese",
     "description": "Tomaten-Mozzarella-Salat mit Basilikum und Olivenöl",
-    "price": {
-      "regular": 5.0,
-    }
+    "price": 5.0,
+    "amount": 1
   }
 ];
+

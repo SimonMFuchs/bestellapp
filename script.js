@@ -1,5 +1,5 @@
 let cart = [];
-let cartRegister = [];
+// let cartRegister = [];
 let amountOfArr = 3;
 
 function init(){
@@ -55,40 +55,69 @@ function setArr(arrCount){
 
 function addToCart(indexIn, arrCount){
     let arrRef = setArr(arrCount);
-    pushToCart(indexIn, arrRef);
-}
+    let objNameToCheck = arrRef[indexIn].name;
 
-function pushToCart(indexIn, arrRef) {
-    cart.push(arrRef[indexIn]);
+    console.log("1." + objNameToCheck);
+    
+    if (!cart.find(dish => dish.name == objNameToCheck) ) {
+        cart.push(arrRef[indexIn]);
+    } else {
+        modiAmount(cart, objNameToCheck);
+    }
 
-    let objToCheck = arrRef[indexIn].name;
-    console.log(objToCheck);
-    checkRegister(objToCheck);
-
-
-    renderCart(indexIn, arrRef);
-}
-
-
-
-function renderCart(indexIn, arrRef) {
     let cartContainerRef = document.getElementById('cart');
-    cartContainerRef.innerHTML = "";
-    let dishName = arrRef[indexIn].name;
-    console.log(dishName);
-    let dishAmount = cart.filter(dish => dish.name == dishName);
-    console.log(dishAmount);
-    dishAmount = dishAmount.length;
+    cartContainerRef.innerHTML = ""
+
+    for (let indexCart = 0; indexCart < cart.length; indexCart++) {
+        cartContainerRef.innerHTML += templateCart(indexCart);
+        
+    }
+}
+
+
+const modiAmount = (arr, objNameToCheck) => {
+    const objToModify = arr.find(obj => obj.name === objNameToCheck);
+    console.log("2." + objToModify);
+
+    if (objToModify) {
+        objToModify.amount++;
+    }
+};
+
+
+
+
+
+
+
+
+
+// pushToCart(indexIn, arrRef);
+
+// function pushToCart(indexIn, arrRef) {
+//     cart.push(arrRef[indexIn]);
+
+//     let objToCheck = arrRef[indexIn].name;
+//     console.log(objToCheck);
+//     checkRegister(objToCheck);
+
+
+//     renderCart(indexIn, arrRef);
+// }
+
+// function renderCart(indexIn, arrRef) {
+//     let cartContainerRef = document.getElementById('cart');
+//     cartContainerRef.innerHTML = "";
+//     let dishName = arrRef[indexIn].name;
+//     console.log(dishName);
+//     let dishAmount = cart.filter(dish => dish.name == dishName);
+//     console.log(dishAmount);
+//     dishAmount = dishAmount.length;
     
 
-    for (let indexCart = 0; indexCart < cartRegister.length; indexCart++) {
-        cartContainerRef.innerHTML += templateCart(indexCart, dishAmount);
-    }
-}
+//     for (let indexCart = 0; indexCart < cartRegister.length; indexCart++) {
+//         cartContainerRef.innerHTML += templateCart(indexCart, dishAmount);
+//     }
+// }
 
-function checkRegister(objToCheck) {
-    if (!cartRegister.find(dish => dish == objToCheck) ) {
-        cartRegister.push(objToCheck);
-    }
-}
 

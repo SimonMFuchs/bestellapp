@@ -1,6 +1,6 @@
 function templateLaCarta(indexLaCarta, categoryRef) {
   return /*html*/ `
-        <div id="container-out${indexLaCarta}">
+        <div id="<container-out${indexLaCarta}>">
             <div class="category-image${indexLaCarta} general-margin-height" alt="Bild der ${categoryRef}"></div>
             <h2>${categoryRef}</h2>
             <div id="container-in${indexLaCarta}"></div>
@@ -14,7 +14,7 @@ function templateContainerIn(indexIn, arrRef, arrCount) {
             <div class="dish-info-container">            
                 <h3>${arrRef[indexIn].name}</h3>
                 <p>${arrRef[indexIn].description}</p>
-                <p><b>${arrRef[indexIn].price.regular.toFixed(2)}€</b></p>
+                <p><b>${arrRef[indexIn].price.toFixed(2)}€</b></p>
             </div>
             <button class="add-btn">+</button>
         </div> 
@@ -23,15 +23,15 @@ function templateContainerIn(indexIn, arrRef, arrCount) {
 
 // console.log(cart[0].name);
 
-function templateCart(indexCart, dishAmount) {
+function templateCart(indexCart) {
   return /*html*/ `
         <div id="cart-item${indexCart}" class="cart-item-container">
             <h3>${cart[indexCart].name}</h3>
             <div>
                 <button class="minus-btn" onclick="">-</button>
-                <span  id="cart-item${indexCart}-amount">${dishAmount}</span>
+                <span  id="cart-item${indexCart}-amount">${cart[indexCart].amount}</span>
                 <button class="plus-btn" onclick="">+</button>
-                <span id="cart-item${indexCart}-price"> ${cart[indexCart].price.regular} €</span>
+                <span id="cart-item${indexCart}-price"> ${cart[indexCart].price.toFixed(2)} €</span>
             </div>
         </div>
     `;
