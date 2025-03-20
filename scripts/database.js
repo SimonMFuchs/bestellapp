@@ -16,8 +16,8 @@ let mainCourse = [
     },
   },
   {
-    "name": "Pizza Triple P",
-    "description": "mit Champignons, Peperoni, Paprika und Mozarella",
+    "name": "Pizza Pino",
+    "description": "mit Pilzen, Peperoni, Paprika und Mozarella",
     "price": {
       "regular": 7.9,
       "large": 8.9,

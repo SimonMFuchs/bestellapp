@@ -13,4 +13,8 @@
     #cart-btn {
         display: none;
     }
+
+    footer {
+        height: unset;
+    }
 }

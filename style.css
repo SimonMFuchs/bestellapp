@@ -92,7 +92,7 @@ main {
 }
 
 h1 {
-    margin-top: 72px;
+    margin-top: 96px;
     margin-bottom: 8px;
     font-size: 32px;
 }
@@ -103,10 +103,10 @@ h1 {
 
 .hero img {
     align-self: center;
-    height: 100px;
-    width: 100px;
-    margin-top: -50px;
-    margin-bottom: -50px;
+    height: 140px;
+    width: 140px;
+    margin-top: -70px;
+    margin-bottom: -70px;
     border-radius: 30px;
     border: px solid rgba(0, 0, 0, 0.2);
 }
@@ -122,6 +122,11 @@ nav {
 nav a {
     color: rgb(98, 98, 98);
     font-weight: 700;
+}
+
+nav a:hover {
+    scale: 1.1;
+    filter: brightness(0.0);
 }
 
 .la-carta-container {
@@ -194,7 +199,30 @@ nav a {
 }
 
 footer {
-    height: 60px;
+    height: 200px;
     width: 100%;
     background-color: #FF8000;
+}
+
+.footer-content {
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.footer-content img {
+    height: 60px;
+    margin-left: 8px;
+}
+
+.footer-content a {
+    color: #007AFE;
+}
+
+.footer-content a:hover {
+    color: #007AFE;
+    text-decoration: underline;
 }

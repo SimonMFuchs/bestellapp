@@ -23,13 +23,13 @@ function templateContainerIn(indexIn, arrRef, arrCount) {
 
 // console.log(cart[0].name);
 
-function templateCart(indexCart) {
+function templateCart(indexCart, dishAmount) {
   return /*html*/ `
         <div id="cart-item${indexCart}" class="cart-item-container">
             <h3>${cart[indexCart].name}</h3>
             <div>
                 <button class="minus-btn" onclick="">-</button>
-                <span  id="cart-item${indexCart}-amount">1</span>
+                <span  id="cart-item${indexCart}-amount">${dishAmount}</span>
                 <button class="plus-btn" onclick="">+</button>
                 <span id="cart-item${indexCart}-price"> ${cart[indexCart].price.regular} €</span>
             </div>

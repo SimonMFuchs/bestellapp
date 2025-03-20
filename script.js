@@ -1,4 +1,5 @@
-let cart = []
+let cart = [];
+let cartRegister = [];
 let amountOfArr = 3;
 
 function init(){
@@ -54,36 +55,40 @@ function setArr(arrCount){
 
 function addToCart(indexIn, arrCount){
     let arrRef = setArr(arrCount);
-    pushOrIncreaseAmount(indexIn, arrRef);
+    pushToCart(indexIn, arrRef);
 }
 
-function pushOrIncreaseAmount(indexIn, arrRef){
+function pushToCart(indexIn, arrRef) {
+    cart.push(arrRef[indexIn]);
+
     let objToCheck = arrRef[indexIn].name;
     console.log(objToCheck);
+    checkRegister(objToCheck);
 
-    if (cart.find(x => x.name == objToCheck)) {
-        let indexCart = cart.findIndex(dish => dish.name === objToCheck);
-        increaseAmount(indexCart, objToCheck);
-    } else {
-        cart.push(arrRef[indexIn]);
-        renderCart(indexIn, arrRef);
-    }
+
+    renderCart(indexIn, arrRef);
 }
 
-function increaseAmount(indexCart, obj){
-    let amountRef = document.getElementById(`cart-item${indexCart}-amount`);
-    let amountValueRef = amountRef.innerHTML;
-    amountRef.innerHTML = parseInt(amountValueRef) + 1;
-}
+
 
 function renderCart(indexIn, arrRef) {
     let cartContainerRef = document.getElementById('cart');
     cartContainerRef.innerHTML = "";
+    let dishName = arrRef[indexIn].name;
+    console.log(dishName);
+    let dishAmount = cart.filter(dish => dish.name == dishName);
+    console.log(dishAmount);
+    dishAmount = dishAmount.length;
+    
 
-    for (let indexCart = 0; indexCart < cart.length; indexCart++) {
-        cartContainerRef.innerHTML += templateCart(indexCart);
-
+    for (let indexCart = 0; indexCart < cartRegister.length; indexCart++) {
+        cartContainerRef.innerHTML += templateCart(indexCart, dishAmount);
     }
 }
 
+function checkRegister(objToCheck) {
+    if (!cartRegister.find(dish => dish == objToCheck) ) {
+        cartRegister.push(objToCheck);
+    }
+}
 
