@@ -25,7 +25,7 @@ function templateContainerIn(indexIn, arrRef, arrCount) {
 
 function templateCart(indexCart) {
   return /*html*/ `
-        <div id="cart-item${indexCart}">
+        <div id="cart-item${indexCart}" class="cart-item-container">
             <h3>${cart[indexCart].name}</h3>
             <div>
                 <button class="minus-btn" onclick="">-</button>

@@ -75,7 +75,7 @@ main {
     margin: 16px;
 }
 
-.cart-wrapper div {
+.cart-header {
     border-bottom: 1px solid #0000001a;
 }
 
@@ -188,8 +188,9 @@ nav a {
     box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.cart-container {
-    border: 1px solid rgba(0, 0, 0, 0.2);
+.cart-item-container {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 8px;
 }
 
 footer {

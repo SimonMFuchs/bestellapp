@@ -55,7 +55,6 @@ function setArr(arrCount){
 function addToCart(indexIn, arrCount){
     let arrRef = setArr(arrCount);
     pushOrIncreaseAmount(indexIn, arrRef);
-    renderCart(indexIn, arrRef);
 }
 
 function pushOrIncreaseAmount(indexIn, arrRef){
@@ -67,6 +66,7 @@ function pushOrIncreaseAmount(indexIn, arrRef){
         increaseAmount(indexCart, objToCheck);
     } else {
         cart.push(arrRef[indexIn]);
+        renderCart(indexIn, arrRef);
     }
 }
 
@@ -85,3 +85,5 @@ function renderCart(indexIn, arrRef) {
 
     }
 }
+
+
