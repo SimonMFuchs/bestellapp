@@ -1,6 +1,6 @@
 function templateLaCarta(indexLaCarta, categoryRef) {
   return /*html*/ `
-        <div id="<container-out${indexLaCarta}>">
+        <div id="container-out${indexLaCarta}">
             <div class="category-image${indexLaCarta} general-margin-height" alt="Bild der ${categoryRef}"></div>
             <h2>${categoryRef}</h2>
             <div id="container-in${indexLaCarta}"></div>

@@ -198,6 +198,11 @@ nav a:hover {
     padding: 8px;
 }
 
+#cart-bill p {
+    display: flex;
+    justify-content: space-between;
+}
+
 footer {
     height: 200px;
     width: 100%;
