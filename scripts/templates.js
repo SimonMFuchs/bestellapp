@@ -28,10 +28,11 @@ function templateCart(indexCart) {
         <div id="cart-item${indexCart}" class="cart-item-container">
             <h3>${cart[indexCart].name}</h3>
             <div>
-                <button class="minus-btn" onclick="">-</button>
+                <button class="minus-btn" onclick="modifyMinusCart('${cart[indexCart].name}')">-</button>
                 <span  id="cart-item${indexCart}-amount">${cart[indexCart].amount}</span>
-                <button class="plus-btn" onclick="">+</button>
-                <span id="cart-item${indexCart}-price"> ${cart[indexCart].price.toFixed(2)} €</span>
+                <button class="plus-btn" onclick="modifyPlusCart('${cart[indexCart].name}')">+</button>
+                <span id="cart-item${indexCart}-price"> ${(cart[indexCart].amount*cart[indexCart].price).toFixed(2)} €</span>
+                <button onclick="deleteFromCart('${cart[indexCart].name}')">🗑️</button>
             </div>
         </div>
     `;

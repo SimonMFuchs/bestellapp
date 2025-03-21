@@ -1,5 +1,4 @@
 let cart = [];
-// let cartRegister = [];
 let amountOfArr = 3;
 
 function init(){
@@ -56,68 +55,63 @@ function setArr(arrCount){
 function addToCart(indexIn, arrCount){
     let arrRef = setArr(arrCount);
     let objNameToCheck = arrRef[indexIn].name;
-
-    console.log("1." + objNameToCheck);
     
     if (!cart.find(dish => dish.name == objNameToCheck) ) {
         cart.push(arrRef[indexIn]);
     } else {
-        modiAmount(cart, objNameToCheck);
+        increaseAmount(objNameToCheck);
     }
 
+    renderCart();
+}
+
+function renderCart() {
     let cartContainerRef = document.getElementById('cart');
     cartContainerRef.innerHTML = ""
 
     for (let indexCart = 0; indexCart < cart.length; indexCart++) {
         cartContainerRef.innerHTML += templateCart(indexCart);
-        
     }
 }
 
+function modifyPlusCart(objNameToCheck) {
+    increaseAmount(objNameToCheck);
+    renderCart();
+}
 
-const modiAmount = (arr, objNameToCheck) => {
-    const objToModify = arr.find(obj => obj.name === objNameToCheck);
-    console.log("2." + objToModify);
+function modifyMinusCart(objNameToCheck) {
+    reduceAmount(objNameToCheck);
+    renderCart();
+}
+
+const increaseAmount = (objNameToCheck) => {
+    const objToModify = cart.find(obj => obj.name === objNameToCheck);
 
     if (objToModify) {
         objToModify.amount++;
     }
 };
 
+const reduceAmount = (objNameToCheck) => {
+    const objToModify = cart.find(obj => obj.name === objNameToCheck);
+
+    if (objToModify && objToModify.amount > 1) {
+        objToModify.amount--;
+    } else {
+        const indexObj = cart.indexOf(objToModify);
+        cart.splice(indexObj, 1);
+    }
+};
+
+const deleteFromCart = (objNameToCheck) => {
+    const objToModify = cart.find(obj => obj.name === objNameToCheck);
+    const indexObj = cart.indexOf(objToModify);
+    objToModify.amount = 1;
+    cart.splice(indexObj, 1);
+    renderCart();
+};
 
 
 
-
-
-
-
-
-// pushToCart(indexIn, arrRef);
-
-// function pushToCart(indexIn, arrRef) {
-//     cart.push(arrRef[indexIn]);
-
-//     let objToCheck = arrRef[indexIn].name;
-//     console.log(objToCheck);
-//     checkRegister(objToCheck);
-
-
-//     renderCart(indexIn, arrRef);
-// }
-
-// function renderCart(indexIn, arrRef) {
-//     let cartContainerRef = document.getElementById('cart');
-//     cartContainerRef.innerHTML = "";
-//     let dishName = arrRef[indexIn].name;
-//     console.log(dishName);
-//     let dishAmount = cart.filter(dish => dish.name == dishName);
-//     console.log(dishAmount);
-//     dishAmount = dishAmount.length;
-    
-
-//     for (let indexCart = 0; indexCart < cartRegister.length; indexCart++) {
-//         cartContainerRef.innerHTML += templateCart(indexCart, dishAmount);
-//     }
-// }
 
 
