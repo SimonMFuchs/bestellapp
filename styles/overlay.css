@@ -5,7 +5,26 @@
     background-color: white;
     position: absolute;
     top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
+    height: 360vh;
+}
+
+.cart-header h2 {
+    display: none;
+}
+
+.cart-wrapper-overlay {
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+
+#close-cart-btn {
+    width: 100%;
+    margin-top: 8px;
+}
+
+#close-cart-btn:hover {
+    cursor: pointer;
+    filter: brightness(1.15);
 }

@@ -4,6 +4,7 @@ let sumTemp = 0;
 
 function init() {
   renderLaCarta();
+  cartButtonPrice();
 }
 
 function renderLaCarta() {
@@ -63,7 +64,9 @@ function addToCart(indexIn, arrCount) {
     increaseAmount(objNameToCheck);
   }
 
-  renderCart();
+  renderCart();  
+  cartButtonPrice()
+
 }
 
 function renderCart() {
@@ -80,11 +83,13 @@ function renderCart() {
 function modifyPlusCart(objNameToCheck) {
   increaseAmount(objNameToCheck);
   renderCart();
+  cartButtonPrice()
 }
 
 function modifyMinusCart(objNameToCheck) {
   reduceAmount(objNameToCheck);
   renderCart();
+  cartButtonPrice()
 }
 
 const increaseAmount = (objNameToCheck) => {
@@ -114,6 +119,7 @@ const deleteFromCart = (objNameToCheck) => {
   calcCartBill();
   renderCart();
   conditionCartBill();
+  cartButtonPrice()
 };
 
 function renderCartBill() {
@@ -144,5 +150,27 @@ function conditionCartBill() {
 function openCart(){
     document.getElementById('main-column-right-id').classList.add('cart-overlay');
     document.getElementById('main-column-right-id').classList.remove('main-column-right');
-    document.getElementById('cart-warpper-id').classList.remove('cart-wrapper');    
+    document.getElementById('cart-warpper-id').classList.remove('cart-wrapper');
+    document.getElementById('cart-warpper-id').classList.add('cart-wrapper-overlay');    
+    document.getElementById('cart-btn').classList.add('d-none');
+}
+
+function closeCart() {
+    document.getElementById('main-column-right-id').classList.remove('cart-overlay');
+    document.getElementById('main-column-right-id').classList.add('main-column-right');
+    document.getElementById('cart-warpper-id').classList.add('cart-wrapper');
+    document.getElementById('cart-warpper-id').classList.remove('cart-wrapper-overlay'); 
+    document.getElementById('cart-btn').classList.remove('d-none');
+}
+
+function cartButtonPrice(){
+    let sumFinal = sumTemp;
+    
+    if(sumFinal > 0){
+        sumFinal = sumFinal + 5;
+    }
+
+    document.getElementById('cart-btn').innerHTML = /*html*/`
+      Warenkorb ${(sumFinal).toFixed(2)}€  
+    ` 
 }

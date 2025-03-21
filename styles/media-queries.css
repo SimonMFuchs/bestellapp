@@ -13,7 +13,15 @@
         display: none;
     }
 
+    #close-cart-btn {
+        display: none;
+    }
+
     footer {
         height: unset;
+    }
+
+    .cart-header h2 {
+        display: unset;
     }
 }
