@@ -27,21 +27,25 @@ function templateCart(indexCart) {
   return /*html*/ `
         <div id="cart-item${indexCart}" class="cart-item-container">
             <h3>${cart[indexCart].name}</h3>
-            <div>
-                <button class="minus-btn" onclick="modifyMinusCart('${cart[indexCart].name}')">-</button>
-                <span  id="cart-item${indexCart}-amount">${cart[indexCart].amount}</span>
-                <button class="plus-btn" onclick="modifyPlusCart('${cart[indexCart].name}')">+</button>
-                <span id="cart-item${indexCart}-price"> ${(cart[indexCart].amount*cart[indexCart].price).toFixed(2)} €</span>
-                <button onclick="deleteFromCart('${cart[indexCart].name}')">🗑️</button>
+            <div class="cart-container-price">
+                <div>
+                    <button class="minus-btn" onclick="modifyMinusCart('${cart[indexCart].name}')">-</button>
+                    <span  id="cart-item${indexCart}-amount">${cart[indexCart].amount}</span>
+                    <button class="plus-btn" onclick="modifyPlusCart('${cart[indexCart].name}')">+</button>
+                </div>
+                <div>
+                    <span id="cart-item${indexCart}-price"> ${(cart[indexCart].amount * cart[indexCart].price).toFixed(2)} €</span>
+                    <button onclick="deleteFromCart('${cart[indexCart].name}')">🗑️</button>
+                </div>
             </div>
         </div>
     `;
 }
 
-function templateCartBill(sumTemp){
-    return /*html*/`
+function templateCartBill(sumTemp) {
+  return /*html*/ `
         <p><span>Zwischensumme</span><span>${sumTemp.toFixed(2)}€</span></p>
         <p><span>Lieferkosten</span><span>5.00€</span></p>
         <p><span><b>Gesamt</b></span><span>${(sumTemp + 5).toFixed(2)}€</span></p>
-    `
+    `;
 }

@@ -84,6 +84,12 @@ main {
     max-height: 70vh;
 }
 
+.cart-container-price {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
 .hero {
     display: flex;
     flex-direction: column;
@@ -102,11 +108,8 @@ h1 {
     font-size: 32px;
 }
 
-.hero p {
-    color: #FF8000;
-}
 
-.hero img {
+.pino-pizza-logo {
     align-self: center;
     height: 140px;
     width: 140px;
@@ -114,6 +117,47 @@ h1 {
     margin-bottom: -70px;
     border-radius: 30px;
     border: px solid rgba(0, 0, 0, 0.2);
+}
+
+.restaurant-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+}
+
+.stars {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+}
+
+.stars img {
+    border-radius: 0;
+    height: 28px;
+    width: 30px;
+}
+
+.dot {
+    height: 4px;
+    width: 4px;
+    border-radius: 2px;
+    background-color: rgb(0, 0, 0);
+}
+
+.bag img {
+    height: 18px;
+}
+
+.bike, .bag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.bike img {
+    height: 24px;
 }
 
 nav {
@@ -130,7 +174,7 @@ nav a {
 }
 
 nav a:hover {
-    scale: 1.1;
+    scale: 1.05;
     filter: brightness(0.0);
 }
 

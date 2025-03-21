@@ -13,12 +13,13 @@
     <link rel="stylesheet" href="./styles/standards.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./styles/media-queries.css">
+    <link rel="stylesheet" href="./styles/overlay.css">
 
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body onload="init()">
-    <button id="cart-btn" onclick="">Warenkorb</button>
+    <button id="cart-btn" onclick="openCart()">Warenkorb</button>
 
     <header>
         <div class="header-container maximal-width">
@@ -35,9 +36,15 @@
         <div class="main-column-left">
             <section class="hero">
                 <div class="hero-container"></div>
-                <img src="./assets/img/pino-pizza-logo-border.png" alt="Pino Pizza Logo">
+                <img class="pino-pizza-logo" src="./assets/img/pino-pizza-logo-border.png" alt="Pino Pizza Logo">
                 <h1 class="general-margin-width">Pino Pizza</h1>
-                <p class="general-margin-width">Bewertung (4,7 von 5 Sternen)</p>
+                <div class="restaurant-info general-margin-width">
+                    <p class="stars"><img src="./assets/icons/star-icon.png" alt="Star Icon"><b>4,6</b> (162)</p>
+                    <div class="dot"></div>
+                    <!-- <p class="bag"><img src="./assets/icons/bag-icon.png" alt="Bag Icon"> Min. 20,00€</p>
+                    <div class="dot"></div> -->
+                    <p class="bike"><img src="./assets/icons/bike-icon-black-large.png" alt=""> Gebühr: 5,00€</p>
+                </div>
             </section>
             <nav>
                 <img src="./assets/icons/nav-icon-small.svg" alt="icon">
@@ -50,12 +57,12 @@
             </section>
         </div>
 
-        <div class="main-column-right">
-            <section class="cart-wrapper">
+        <div id="main-column-right-id" class="main-column-right">
+            <section id="cart-warpper-id" class="cart-wrapper">
                 <div class="cart-header">
                     <h2>Warenkorb</h2>
                 </div>
-                <div id="cart" class="cart-container"></div>
+                <div id="cart" class="cart-container">Der Warenkorb ist leer</div>
                 <div id="cart-bill" class="general-margin-width d-none">
                 </div>
             </section>

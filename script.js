@@ -1,6 +1,6 @@
 let cart = [];
 let amountOfArr = 3;
-let sumTemp = 0; // global?
+let sumTemp = 0;
 
 function init() {
   renderLaCarta();
@@ -124,7 +124,7 @@ function renderCartBill() {
 }
 
 function calcCartBill() {
-    sumTemp = 0;
+  sumTemp = 0;
 
   for (let indexBill = 0; indexBill < cart.length; indexBill++) {
     const amount = cart[indexBill].amount;
@@ -133,10 +133,16 @@ function calcCartBill() {
   }
 }
 
-function conditionCartBill(){
-    if(cart.length > 0){
-        renderCartBill()
-    } else {
-        document.getElementById("cart-bill").innerHTML = ""
-    }
+function conditionCartBill() {
+  if (cart.length > 0) {
+    renderCartBill();
+  } else {
+    document.getElementById("cart-bill").innerHTML = "Der Warenkorb ist wieder leer";
+  }
+}
+
+function openCart(){
+    document.getElementById('main-column-right-id').classList.add('cart-overlay');
+    document.getElementById('main-column-right-id').classList.remove('main-column-right');
+    document.getElementById('cart-warpper-id').classList.remove('cart-wrapper');    
 }
