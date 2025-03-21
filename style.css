@@ -79,6 +79,11 @@ main {
     border-bottom: 1px solid #0000001a;
 }
 
+.cart-container {
+    overflow-y: auto;     
+    max-height: 70vh;
+}
+
 .hero {
     display: flex;
     flex-direction: column;

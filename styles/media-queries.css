@@ -4,7 +4,6 @@
         justify-self: flex-end;
         flex-direction: column;
         width: 300px;
-        height: calc(100vh- 80px);
         position: sticky;
         top: 0px;
         background-color: white;

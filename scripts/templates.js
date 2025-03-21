@@ -37,3 +37,11 @@ function templateCart(indexCart) {
         </div>
     `;
 }
+
+function templateCartBill(sumTemp){
+    return /*html*/`
+        <p><span>Zwischensumme</span><span>${sumTemp.toFixed(2)}€</span></p>
+        <p><span>Lieferkosten</span><span>5.00€</span></p>
+        <p><span><b>Gesamt</b></span><span>${(sumTemp + 5).toFixed(2)}€</span></p>
+    `
+}
