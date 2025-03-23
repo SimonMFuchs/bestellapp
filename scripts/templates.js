@@ -21,8 +21,6 @@ function templateContainerIn(indexIn, arrRef, arrCount) {
     `;
 }
 
-// console.log(cart[0].name);
-
 function templateCart(indexCart) {
   return /*html*/ `
         <div id="cart-item${indexCart}" class="cart-item-container">
@@ -47,6 +45,13 @@ function templateCartBill(sumTemp) {
         <p class="secondary"><span>Zwischensumme</span><span>${sumTemp.toFixed(2)}€</span></p>
         <p class="secondary"><span>Lieferkosten</span><span>5.00€</span></p>
         <p><span><b>Gesamt</b></span><span><b> ${(sumTemp + 5).toFixed(2)}€</b></span></p>
+        <button id="order-btn" onclick="orderTest(), bagGroundEmptyCart()">Bestellen</button>
     `;
 }
 
+function templateBagGroundEmptyCart() {
+  return /*html*/ `
+        <p class="cart-empty-filler-text">Keine Gerichte ausgewählt</p>
+        <img class="cart-empty-filler" src="./assets/img/bag-ground.png" alt="Einkaufstasche im Hintergrund">
+    `;
+}

@@ -12,8 +12,8 @@
 
     <link rel="stylesheet" href="./styles/standards.css">
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./styles/media-queries.css">
     <link rel="stylesheet" href="./styles/overlay.css">
+    <link rel="stylesheet" href="./styles/media-queries.css">
 
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
@@ -58,10 +58,13 @@
         <div id="main-column-right-id" class="main-column-right">
             <section id="cart-warpper-id" class="cart-wrapper">
                 <div class="cart-header">
-                    <button id="close-cart-btn" class="general-margin-width" onclick="closeCart()">Warenkorb schließen</button>
+                    <button id="close-cart-btn" class="general-margin-width" onclick="closeCart()">Warenkorb schließen<img class="cart-bag-icon" src="./assets/icons/cart-bag-icon.png" alt="bag icon"></button>
                     <h2>Warenkorb</h2>
                 </div>
-                <div id="cart" class="cart-container">Der Warenkorb ist leer</div>
+                <div id="cart" class="cart-container">
+                    <p class="cart-empty-filler-text">Keine Gerichte ausgewählt</p>
+                    <img class="cart-empty-filler" src="./assets/img/bag-ground.png" alt="Einkaufstasche im Hintergrund">
+                </div>
                 <div id="cart-bill" class="general-margin-width"></div>
             </section>
         </div>
@@ -74,7 +77,14 @@
         </div>
     </footer>
 
-    <button id="cart-btn" onclick="openCart()">Warenkorb<span id="cart-button-price"></span></button>
+    <button id="cart-btn" onclick="openCart()"></span></button>
+ 
+    <div id="order-overlay-id" class="order-overlay d-none">
+        <div class="order-container">
+            <h2>Testbestellung wurde durchgeführt</h2>
+            <button onclick="closeOrderOverlay()">OK</button>
+        </div>
+    </div>
 </body>
 
 </html>

@@ -64,9 +64,8 @@ function addToCart(indexIn, arrCount) {
     increaseAmount(objNameToCheck);
   }
 
-  renderCart();  
-  cartButtonPrice()
-
+  renderCart();
+  cartButtonPrice();
 }
 
 function renderCart() {
@@ -83,13 +82,13 @@ function renderCart() {
 function modifyPlusCart(objNameToCheck) {
   increaseAmount(objNameToCheck);
   renderCart();
-  cartButtonPrice()
+  cartButtonPrice();
 }
 
 function modifyMinusCart(objNameToCheck) {
   reduceAmount(objNameToCheck);
   renderCart();
-  cartButtonPrice()
+  cartButtonPrice();
 }
 
 const increaseAmount = (objNameToCheck) => {
@@ -119,7 +118,7 @@ const deleteFromCart = (objNameToCheck) => {
   calcCartBill();
   renderCart();
   conditionCartBill();
-  cartButtonPrice()
+  cartButtonPrice();
 };
 
 function renderCartBill() {
@@ -143,34 +142,50 @@ function conditionCartBill() {
   if (cart.length > 0) {
     renderCartBill();
   } else {
-    document.getElementById("cart-bill").innerHTML = "Der Warenkorb ist wieder leer";
+    document.getElementById("cart-bill").innerHTML = "";
   }
 }
 
-function openCart(){
-    document.getElementById('main-column-right-id').classList.add('cart-overlay');
-    document.getElementById('main-column-right-id').classList.remove('main-column-right');
-    document.getElementById('cart-warpper-id').classList.remove('cart-wrapper');
-    document.getElementById('cart-warpper-id').classList.add('cart-wrapper-overlay');    
-    document.getElementById('cart-btn').classList.add('d-none');
+function openCart() {
+  document.getElementById("main-column-right-id").classList.add("cart-overlay");
+  document.getElementById("main-column-right-id").classList.remove("main-column-right");
+  document.getElementById("cart-warpper-id").classList.remove("cart-wrapper");
+  document.getElementById("cart-warpper-id").classList.add("cart-wrapper-overlay");
+  document.getElementById("cart-btn").classList.add("d-none");
 }
 
 function closeCart() {
-    document.getElementById('main-column-right-id').classList.remove('cart-overlay');
-    document.getElementById('main-column-right-id').classList.add('main-column-right');
-    document.getElementById('cart-warpper-id').classList.add('cart-wrapper');
-    document.getElementById('cart-warpper-id').classList.remove('cart-wrapper-overlay'); 
-    document.getElementById('cart-btn').classList.remove('d-none');
+  document.getElementById("main-column-right-id").classList.remove("cart-overlay");
+  document.getElementById("main-column-right-id").classList.add("main-column-right");
+  document.getElementById("cart-warpper-id").classList.add("cart-wrapper");
+  document.getElementById("cart-warpper-id").classList.remove("cart-wrapper-overlay");
+  document.getElementById("cart-btn").classList.remove("d-none");
 }
 
-function cartButtonPrice(){
-    let sumFinal = sumTemp;
-    
-    if(sumFinal > 0){
-        sumFinal = sumFinal + 5;
-    }
+function cartButtonPrice() {
+  let sumFinal = sumTemp;
 
-    document.getElementById('cart-btn').innerHTML = /*html*/`
-      Warenkorb ${(sumFinal).toFixed(2)}€  
-    ` 
+  if (sumFinal > 0) {
+    sumFinal = sumFinal + 5;
+  }
+
+  document.getElementById("cart-btn").innerHTML = /*html*/ `
+      Warenkorb ${sumFinal.toFixed(2)}€<span id="cart-button-price"></span><img class="cart-bag-icon" src="./assets/icons/cart-bag-icon.png" alt="bag icon">  
+    `;
+}
+
+function orderTest() {
+  document.getElementById("order-overlay-id").classList.remove("d-none");
+
+  for (let indexCart = 0; 0 < cart.length; ) {
+    deleteFromCart(cart[indexCart].name);
+  }
+}
+
+function closeOrderOverlay() {
+  document.getElementById("order-overlay-id").classList.add("d-none");
+}
+
+function bagGroundEmptyCart() {
+  document.getElementById("cart").innerHTML = templateBagGroundEmptyCart();
 }

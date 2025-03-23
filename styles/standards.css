@@ -34,20 +34,3 @@ h2 {
 .d-none {
     display: none;
 }
-
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #FF8000;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    
-}

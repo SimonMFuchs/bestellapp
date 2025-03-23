@@ -200,8 +200,17 @@ nav a:hover {
 }
 
 .cart-item-container {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    padding: 8px;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    margin: 0 8px;
+}
+
+.cart-item-container:first-child {
+    border-top: none;
+    margin: 0 8px;
+}
+
+#cart-bill{
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 #cart-bill p {
@@ -230,11 +239,10 @@ footer {
 }
 
 .footer-content a {
-    color: #007AFE;
+    color: rgb(98, 98, 98);
 }
 
 .footer-content a:hover {
-    color: #007AFE;
     text-decoration: underline;
 }
 
@@ -249,6 +257,14 @@ footer {
     color: white;
     font-size: 20px;
     font-weight: 700;
+}
+
+.cart-bag-icon {
+    width: 20px;
+    height: 22px;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-bottom: -2px;    
 }
 
 .cart-wrapper {
@@ -269,6 +285,8 @@ footer {
 .cart-container {
     overflow-y: auto;
     max-height: 70vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .cart-container-price {
@@ -287,7 +305,6 @@ footer {
 .secondary {
     color: rgb(98, 98, 98);
 }
-
 
 #cart-btn {
     position: fixed;
@@ -337,4 +354,34 @@ footer {
     background-image: url('./assets/icons/minus-icon-thic.png');
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.cart-empty-filler-text {
+    text-align: center;
+    color: #D7D7D7;
+    margin-top: 32px;
+    margin-bottom: 0;
+}
+
+.cart-empty-filler {
+    object-position: center;
+    align-self: center;
+    justify-self: center;
+}
+
+#order-btn {
+    border: none;
+    background-color: #FF8000;
+    color: white;
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
+#order-btn:hover {
+    cursor: pointer;
+    filter: brightness(1.15);
 }
