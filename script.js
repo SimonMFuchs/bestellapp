@@ -169,9 +169,7 @@ function cartButtonPrice() {
     sumFinal = sumFinal + 5;
   }
 
-  document.getElementById("cart-btn").innerHTML = /*html*/ `
-      Warenkorb ${sumFinal.toFixed(2)}€<span id="cart-button-price"></span><img class="cart-bag-icon" src="./assets/icons/cart-bag-icon.png" alt="bag icon">  
-    `;
+  document.getElementById("cart-btn").innerHTML = templateCartButtonPrice(sumFinal);
 }
 
 function orderTest() {

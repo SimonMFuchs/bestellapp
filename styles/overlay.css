@@ -6,7 +6,7 @@
     position: absolute;
     top: 0;
     width: 100%;
-    height: 360vh;
+    min-height: 500vh;
 }
 
 .cart-header h2 {
@@ -37,7 +37,7 @@
     position: absolute;
     top: 0;
     width: 100%;
-    height: 360vh;
+    min-height: 500vh;
 }
 
 .order-container {
@@ -51,6 +51,10 @@
     align-items: center;
     gap: 16px;
     padding: 16px;
+}
+
+.order-container h2 {
+    text-align: center;
 }
 
 .order-container button {
