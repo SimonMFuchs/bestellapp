@@ -68,10 +68,10 @@ h1 {
 
 .pino-pizza-logo {
     align-self: center;
-    height: 140px;
-    width: 140px;
-    margin-top: -70px;
-    margin-bottom: -70px;
+    height: 100px;
+    width: 100px;
+    margin-top: -50px;
+    margin-bottom: -50px;
     border-radius: 30px;
     border: px solid rgba(0, 0, 0, 0.2);
 }

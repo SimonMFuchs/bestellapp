@@ -25,3 +25,12 @@
         display: unset;
     }
 }
+
+@media(min-width: 700px) {
+    .pino-pizza-logo {
+        height: 140px;
+        width: 140px;
+        margin-top: -70px;
+        margin-bottom: -70px;
+    }
+} 
