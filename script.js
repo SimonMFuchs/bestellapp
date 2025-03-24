@@ -79,18 +79,6 @@ function renderCart() {
   conditionCartBill();
 }
 
-// function modifyPlusCart(objNameToCheck) {
-//   increaseAmount(objNameToCheck);
-//   renderCart();
-//   cartButtonPrice();
-// }
-
-// function modifyMinusCart(objNameToCheck) {
-//   reduceAmount(objNameToCheck);
-//   renderCart();
-//   cartButtonPrice();
-// }
-
 function modifyCart(objNameToCheck, operation) {
   switch (operation) {
     case 0:

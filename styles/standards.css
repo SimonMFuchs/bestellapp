@@ -34,3 +34,7 @@ h2 {
 .d-none {
     display: none;
 }
+
+.overflow-hidden {
+    overflow-y: hidden;
+}

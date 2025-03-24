@@ -10,13 +10,13 @@ function templateLaCarta(indexLaCarta, categoryRef) {
 
 function templateContainerIn(indexIn, arrRef, arrCount) {
   return /*html*/ `
-        <div id="dish-in${indexIn}" class="dish-in-container general-margin-height" onclick="addToCart(${indexIn}, ${arrCount})">
+        <div id="dish-in${indexIn}" class="dish-in-container general-margin-height">
             <div class="dish-info-container">            
                 <h3>${arrRef[indexIn].name}</h3>
                 <p>${arrRef[indexIn].description}</p>
                 <p><b>${arrRef[indexIn].price.toFixed(2).replace(".", ",")}€</b></p>
             </div>
-            <button class="add-btn">+</button>
+            <button class="add-btn" onclick="addToCart(${indexIn}, ${arrCount})"></button>
         </div> 
     `;
 }
