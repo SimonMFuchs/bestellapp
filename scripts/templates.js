@@ -27,9 +27,9 @@ function templateCart(indexCart) {
             <h3>${cart[indexCart].name}</h3>
             <div class="cart-container-price">
                 <div>
-                    <button class="minus-btn cart-action-btn" onclick="modifyMinusCart('${cart[indexCart].name}')"></button>
+                    <button class="minus-btn cart-action-btn" onclick="modifyCart('${cart[indexCart].name}', 1)"></button>
                     <span  id="cart-item${indexCart}-amount">${cart[indexCart].amount}x</span>
-                    <button class="plus-btn cart-action-btn" onclick="modifyPlusCart('${cart[indexCart].name}')"></button>
+                    <button class="plus-btn cart-action-btn" onclick="modifyCart('${cart[indexCart].name}', 0)"></button>
                 </div>
                 <div>
                     <span id="cart-item${indexCart}-price"> ${(cart[indexCart].amount * cart[indexCart].price).toFixed(2).replace(".", ",")} €</span>

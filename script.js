@@ -79,14 +79,28 @@ function renderCart() {
   conditionCartBill();
 }
 
-function modifyPlusCart(objNameToCheck) {
-  increaseAmount(objNameToCheck);
-  renderCart();
-  cartButtonPrice();
-}
+// function modifyPlusCart(objNameToCheck) {
+//   increaseAmount(objNameToCheck);
+//   renderCart();
+//   cartButtonPrice();
+// }
 
-function modifyMinusCart(objNameToCheck) {
-  reduceAmount(objNameToCheck);
+// function modifyMinusCart(objNameToCheck) {
+//   reduceAmount(objNameToCheck);
+//   renderCart();
+//   cartButtonPrice();
+// }
+
+function modifyCart(objNameToCheck, operation) {
+  switch (operation) {
+    case 0:
+      increaseAmount(objNameToCheck);
+      break;
+
+    case 1:
+      reduceAmount(objNameToCheck);
+      break;
+  }
   renderCart();
   cartButtonPrice();
 }
@@ -143,6 +157,7 @@ function conditionCartBill() {
     renderCartBill();
   } else {
     document.getElementById("cart-bill").innerHTML = "";
+    bagGroundEmptyCart();
   }
 }
 
